@@ -1,0 +1,23 @@
+@import '../../theme/palette';
+
+
+.spinner {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  animation: spinner 1.2s infinite linear;
+  border-top: 4px solid #FFF;
+  border-right: 4px solid #FFF;
+  border-bottom: 4px solid #808080;
+  border-left: 4px solid #808080;
+  border-radius: 50%;
+  background: transparent;
+}
+
+@keyframes spinner {
+  0%    {transform: rotate(0deg)}
+  100%  {transform: rotate(360deg)}
+}

@@ -1,0 +1,55 @@
+@import '../../theme/palette';
+@import '../../theme/animations';
+
+.postman {
+  display: block;
+  position: fixed;
+  top: 80%;
+  left: 80%;
+  min-width: 200px;
+  min-height: 50px;
+  align-items: center;
+  border: 1px solid darken($paletteColor2, 15%);
+  border-radius: 3px;
+  background-color: $paletteColor2;
+  z-index: 99;
+
+  img {
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    transition: border .5s ease;
+    border: 1px solid $paletteColor5;
+    border-radius: 50%;
+  }
+
+  p {
+    align-self: center;
+    font-size: small;
+  }
+
+  .postmanInStart {
+    transform: translate(100%, 0) scale(.5);
+    opacity: .01;
+  }
+
+  .postmanInEnd {
+    transform: scale(1);
+    transition: opacity 700ms $cubic1,
+    transform 700ms $cubic1;
+    opacity: 1;
+  }
+
+  .postmanOutStart {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .postmanOutEnd {
+    transform: translate(100%, 0) scale(0.1);
+    transition: opacity 700ms $cubic1,
+    transform 700ms $cubic1;
+    opacity: .01;
+  }
+}
